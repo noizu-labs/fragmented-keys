@@ -15,8 +15,8 @@ history behind its prefix while the whole family is browsable and releasable
 in one place. Shared, composite-owned files (`README.md`, `.subtrees`,
 `spec/`, `.gitignore`) live at the root and never inside a subtree prefix.
 
-Destined for `noizu-labs/fragmented-keys` and a nested submodule slot at
-`Portfolio/Libs/core/fragmented-keys`.
+Destined for `noizu-labs/fragmented-keys` and registered as a nested gitlink at
+`Portfolio/Libs/fragmented-keys` in `the-robot-lives/Libs`.
 
 ## Layout
 
