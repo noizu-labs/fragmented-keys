@@ -1,0 +1,275 @@
+{
+  "global_prefix": "GNP",
+  "source": "fragmented-keys-py",
+  "cases": [
+    {
+      "name": "single_standard",
+      "key": "profile",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "User",
+          "instance": "42",
+          "version": 1.0
+        }
+      ],
+      "raw": "profile_:tUser_42GNP:v1.0",
+      "md5": "42fe32447ef1550db2861918f3c9917a"
+    },
+    {
+      "name": "two_standard",
+      "key": "Dashboard",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "User",
+          "instance": "42",
+          "version": 1748000000000.0
+        },
+        {
+          "kind": "standard",
+          "tag": "City",
+          "instance": "chicago",
+          "version": 5.0
+        }
+      ],
+      "raw": "Dashboard_:tUser_42GNP:v1748000000000.0:tCity_chicagoGNP:v5.0",
+      "md5": "371011c8520b2129c3231b1396adab4d"
+    },
+    {
+      "name": "two_standard_reversed",
+      "key": "Dashboard",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "City",
+          "instance": "chicago",
+          "version": 5.0
+        },
+        {
+          "kind": "standard",
+          "tag": "User",
+          "instance": "42",
+          "version": 1748000000000.0
+        }
+      ],
+      "raw": "Dashboard_:tCity_chicagoGNP:v5.0:tUser_42GNP:v1748000000000.0",
+      "md5": "428a2f7dd90435adbb10aea9bd0d956e"
+    },
+    {
+      "name": "constant_plus_standard",
+      "key": "org_list",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "constant",
+          "tag": "schema",
+          "instance": "v1",
+          "version": 1.0
+        },
+        {
+          "kind": "standard",
+          "tag": "Org",
+          "instance": "7",
+          "version": 1748000000000.1
+        }
+      ],
+      "raw": "org_list_:tschema_v1GNP:v1.0:tOrg_7GNP:v1748000000000.1",
+      "md5": "0b89eefbf45216cb6318947727095d0d"
+    },
+    {
+      "name": "group_id",
+      "key": "org_list",
+      "group_id": "us",
+      "tags": [
+        {
+          "kind": "constant",
+          "tag": "schema",
+          "instance": "v1",
+          "version": 1.0
+        },
+        {
+          "kind": "standard",
+          "tag": "Org",
+          "instance": "7",
+          "version": 1748000000000.1
+        }
+      ],
+      "raw": "org_list_us:tschema_v1GNP:v1.0:tOrg_7GNP:v1748000000000.1",
+      "md5": "8f3f0c26b79e866a5532bac32de112bb"
+    },
+    {
+      "name": "drifted_versions",
+      "key": "feed",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "User",
+          "instance": "42",
+          "version": 1748000000000.2002
+        },
+        {
+          "kind": "standard",
+          "tag": "Post",
+          "instance": "9",
+          "version": 1748000000000.901
+        }
+      ],
+      "raw": "feed_:tUser_42GNP:v1748000000000.2002:tPost_9GNP:v1748000000000.901",
+      "md5": "f4a9e0dc6a8bf61ec2e78d4ec32158d1"
+    },
+    {
+      "name": "empty_instance",
+      "key": "settings",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "Global",
+          "instance": "",
+          "version": 3.5
+        }
+      ],
+      "raw": "settings_:tGlobal_GNP:v3.5",
+      "md5": "424fa0875c0362ab596756c77fbd8904"
+    },
+    {
+      "name": "no_tags",
+      "key": "bare",
+      "group_id": "",
+      "tags": [],
+      "raw": "bare_",
+      "md5": "4bf5efa7d2ff5cf3aad514f55bb51f5d"
+    },
+    {
+      "name": "unicode_instance",
+      "key": "city_page",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "City",
+          "instance": "münchen",
+          "version": 2.0
+        }
+      ],
+      "raw": "city_page_:tCity_münchenGNP:v2.0",
+      "md5": "ea8f03bb454c6b0a971d38cb9eee452c"
+    },
+    {
+      "name": "scientific_version",
+      "key": "epoch",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "Epoch",
+          "instance": "x",
+          "version": 1e+16
+        }
+      ],
+      "raw": "epoch_:tEpoch_xGNP:v1e+16",
+      "md5": "e557109bb83ec147c3c8f014e6c0ea92"
+    },
+    {
+      "name": "epoch_1",
+      "key": "content_page",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "constant",
+          "tag": "epoch",
+          "instance": "global",
+          "version": 1.0
+        },
+        {
+          "kind": "standard",
+          "tag": "Page",
+          "instance": "careers",
+          "version": 1748000000000.0
+        }
+      ],
+      "raw": "content_page_:tepoch_globalGNP:v1.0:tPage_careersGNP:v1748000000000.0",
+      "md5": "c93c5ac988ff9cb82cc535beea5a10ba"
+    },
+    {
+      "name": "epoch_2",
+      "key": "content_page",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "constant",
+          "tag": "epoch",
+          "instance": "global",
+          "version": 2.0
+        },
+        {
+          "kind": "standard",
+          "tag": "Page",
+          "instance": "careers",
+          "version": 1748000000000.0
+        }
+      ],
+      "raw": "content_page_:tepoch_globalGNP:v2.0:tPage_careersGNP:v1748000000000.0",
+      "md5": "4973620f7c051997d00ddacb73f50e24"
+    },
+    {
+      "name": "no_epoch_baseline",
+      "key": "content_page",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "Page",
+          "instance": "careers",
+          "version": 1748000000000.0
+        }
+      ],
+      "raw": "content_page_:tPage_careersGNP:v1748000000000.0",
+      "md5": "37d733fac77416fa8fa8eb258df0edf6"
+    },
+    {
+      "name": "five_tags",
+      "key": "wide",
+      "group_id": "",
+      "tags": [
+        {
+          "kind": "standard",
+          "tag": "A",
+          "instance": "1",
+          "version": 1.0
+        },
+        {
+          "kind": "standard",
+          "tag": "B",
+          "instance": "2",
+          "version": 2.0
+        },
+        {
+          "kind": "standard",
+          "tag": "C",
+          "instance": "3",
+          "version": 1748000000000.3003
+        },
+        {
+          "kind": "standard",
+          "tag": "D",
+          "instance": "4",
+          "version": 0.1
+        },
+        {
+          "kind": "standard",
+          "tag": "E",
+          "instance": "5",
+          "version": 99.0
+        }
+      ],
+      "raw": "wide_:tA_1GNP:v1.0:tB_2GNP:v2.0:tC_3GNP:v1748000000000.3003:tD_4GNP:v0.1:tE_5GNP:v99.0",
+      "md5": "3b039eaa34840bdf5d072021b524698e"
+    }
+  ]
+}
