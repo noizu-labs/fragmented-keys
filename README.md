@@ -75,3 +75,23 @@ Push composite-side changes under a directory back upstream:
 > squashed line, producing spurious conflicts and duplicate content. The
 > `.subtrees` manifest records the exact url, branch and squash flag per
 > prefix so no future pull has to guess.
+
+### The sync script
+
+ [`scripts/sync-subtrees.sh`](scripts/sync-subtrees.sh) automates all of the
+above safely — prefer it over hand-typed subtree commands:
+
+    scripts/sync-subtrees.sh status                 # probe every upstream, show the plan
+    scripts/sync-subtrees.sh pull [prefix ...]      # pull from main (or the manifest
+                                                   #   branch where no main exists, e.g.
+                                                   #   php/java) — always --squash
+    scripts/sync-subtrees.sh push [prefix ...]      # push to develop; prefixes whose
+                                                   #   upstream lacks develop are skipped
+    scripts/sync-subtrees.sh pull --dry-run python  # print the exact commands only
+
+It reads `.subtrees` as the single source of truth for prefixes and urls,
+probes each remote with `git ls-remote` before acting (upstream default
+branches are not uniform: `php` and `java` live on `master`, and only
+`python` and `python-django` currently carry a `develop` branch), refuses
+to run on a dirty tree, never creates branches on a remote, and summarizes
+per-prefix ok/skipped/failed at the end.
