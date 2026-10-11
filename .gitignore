@@ -1,0 +1,7 @@
+fragmented-keys*.tgz
+node_modules/
+.envrc
+dist/
+*.tsbuildinfo
+.DS_Store
+coverage/
