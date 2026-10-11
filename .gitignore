@@ -1,0 +1,21 @@
+.coverage
+.DS_Store
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+.venv/
+.envrc
+# Temp
+.tmp/
+
+# Sphinx docs build
+docs/_build/
