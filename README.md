@@ -28,14 +28,28 @@ Destined for `noizu-labs/fragmented-keys` and a nested submodule slot at
 | `swift/` | `noizu-labs/SwiftFragmentedKeys` | Swift | `main` | `cab5f6b9524e6436c9d58f7833b9e9088f69c8b3` |
 | `java/` | `noizu-labs/fragmented-keys-4java` | Java | `master` | `d5f48b5c8f17172b172d863f7920e8133f111af6` |
 | `go/` | `noizu-labs-scaffolding/fragmented-keys-go` | Go | `main` | `db54f7b5c0865b60b541a04baadfb8b1a2c7c3c8` |
-| `elixir/` | *pending authorization* (`fragmented-keys-ex`, private) | Elixir | — | — |
-| `nodejs/` | *pending authorization* (`fragmented-keys-nodejs`, private) | TypeScript | — | — |
+| `elixir/` | `noizu-labs-scaffolding/fragmented-keys-ex` | Elixir | `main` | `e4d0ad026460ead852aa47f9d5607f35fcce4180` |
+| `nodejs/` | `noizu-labs-scaffolding/fragmented-keys-nodejs` | TypeScript | `main` | `94ea1e345f6adbc833f32b89e5f9e1f87b48cb71` |
 
 Deliberately **excluded**: `lax-os/fragmented-keys-4java` — a stale fork of
-the Java repo, not a separate implementation. Prefixes `elixir/` and `nodejs/`
-are reserved for the two private variants once authorization clears.
+the Java repo, not a separate implementation.
 
 The machine-readable counterpart of the table above is [`.subtrees`](.subtrees).
+
+## Known gaps
+
+- **No cross-language test vectors.** Each implementation is tested only in
+  its own language's harness; there is no shared fixture set asserting that
+  all eight ports produce identical composite keys for identical inputs, so a
+  port could drift from the family without any test failing.
+- **Spec leaves digest/version rendering unpinned.** `spec/ALGORITHM.md` does
+  not pin the MD5 digest encoding and casing (hex lower/upper, raw bytes) nor
+  the exact rendering of version integers inside the pre-hash string, so
+  implementations could diverge silently while each remaining self-consistent.
+- **`nodejs/package.json` `repository.url` is wrong.** It points at
+  `fragmented-keys-ts`, which does not exist (404). That is an upstream issue
+  in `noizu-labs-scaffolding/fragmented-keys-nodejs`, deliberately not fixed
+  composite-side.
 
 ## Syncing
 

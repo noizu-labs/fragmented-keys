@@ -7,6 +7,5 @@ python-django/ git@github.com:noizu-labs-scaffolding/fragmented_keys_django.git 
 swift/         git@github.com:noizu-labs/SwiftFragmentedKeys.git               main    squash
 java/          git@github.com:noizu-labs/fragmented-keys-4java.git             master  squash
 go/            git@github.com:noizu-labs-scaffolding/fragmented-keys-go.git    main    squash
-# Pending authorization (private upstreams) — do not import until cleared:
-# elixir/  <url-TBD>  <branch-TBD>  squash   # fragmented-keys-ex (Elixir)
-# nodejs/  <url-TBD>  <branch-TBD>  squash   # fragmented-keys-nodejs (TypeScript)
+elixir/        git@github.com:noizu-labs-scaffolding/fragmented-keys-ex.git     main    squash
+nodejs/        git@github.com:noizu-labs-scaffolding/fragmented-keys-nodejs.git main    squash
