@@ -1,0 +1,12 @@
+# fragmented-keys composite — subtree manifest
+# One line per prefix: <prefix> <url> <branch> squash
+# The trailing `squash` flag is REQUIRED on every pull — every import was squashed.
+php/           git@github.com:noizu/fragmented-keys.git                        master  squash
+python/        git@github.com:noizu-labs/fragmented-keys-py.git                main    squash
+python-django/ git@github.com:noizu-labs-scaffolding/fragmented_keys_django.git main   squash
+swift/         git@github.com:noizu-labs/SwiftFragmentedKeys.git               main    squash
+java/          git@github.com:noizu-labs/fragmented-keys-4java.git             master  squash
+go/            git@github.com:noizu-labs-scaffolding/fragmented-keys-go.git    main    squash
+# Pending authorization (private upstreams) — do not import until cleared:
+# elixir/  <url-TBD>  <branch-TBD>  squash   # fragmented-keys-ex (Elixir)
+# nodejs/  <url-TBD>  <branch-TBD>  squash   # fragmented-keys-nodejs (TypeScript)

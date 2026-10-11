@@ -1,0 +1,8 @@
+# fragmented-keys composite — common language ignores
+_build/
+deps/
+node_modules/
+__pycache__/
+vendor/
+.DS_Store
+*.beam
