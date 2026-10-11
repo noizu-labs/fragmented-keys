@@ -1,0 +1,43 @@
+[project]
+name = "fragmented-keys"
+version = "0.1.1"
+description = "Fragmented Key Management and Invalidation Library for use with Redis"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Keith Brings", email = "keith.brings@noizu.com" }
+]
+requires-python = ">=3.13"
+keywords = ["cache", "redis", "invalidation", "fragmented-keys", "versioned-keys"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+dependencies = [
+    "redis>=5.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/noizu-labs/fragmented-keys-py"
+Documentation = "https://fragmented-keys-py.readthedocs.io/en/latest/"
+Repository = "https://github.com/noizu-labs/fragmented-keys-py"
+Issues = "https://github.com/noizu-labs/fragmented-keys-py/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+docs = [
+    "sphinx>=7.0",
+    "furo",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.0,<0.11.0"]
+build-backend = "uv_build"
